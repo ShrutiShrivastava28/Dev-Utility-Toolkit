@@ -1,0 +1,34 @@
+<div class="tool">
+
+  <!-- HEADER -->
+  <div class="tool-header">
+    <h2></h2>
+    <button class="copy-btn" (click)="copyToClipboard(output)">Copy</button>
+  </div>
+
+  <!-- INPUT -->
+  <div class="tool-input">
+    <textarea
+      [(ngModel)]="input"
+      placeholder="Enter text to encode or decode..."
+    ></textarea>
+  </div>
+
+  <!-- ACTIONS -->
+  <div class="tool-actions">
+    <button (click)="encode()">Encode</button>
+    <button (click)="decode()">Decode</button>
+    <button (click)="clear()">Clear</button>
+  </div>
+
+  <!-- OUTPUT -->
+  <div class="tool-output">
+    <pre>{{ output }}</pre>
+  </div>
+
+  <!-- STATUS -->
+  <div class="status" *ngIf="statusMessage">
+    {{ statusMessage }}
+  </div>
+
+</div>

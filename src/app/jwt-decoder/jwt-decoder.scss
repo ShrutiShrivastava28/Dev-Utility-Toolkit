@@ -1,0 +1,195 @@
+:host {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+
+.tool {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+
+  font-family: 'Inter', sans-serif;
+  color: #1f2937;
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+/* =========================
+   HEADER
+========================= */
+.tool-header {
+  flex-shrink: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 10px 12px;
+  border-bottom: 1px solid #e5e7eb;
+  background: #f9fafc;
+
+  h2 {
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0;
+    color: #1f2937;
+  }
+
+  .copy-btn {
+    font-size: 12px;
+    color: #1d4ed8;
+    background: #e8f0ff;
+    border: none;
+    padding: 4px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+
+    &:hover {
+      background: #dbeafe;
+    }
+  }
+}
+
+/* =========================
+   INPUT
+========================= */
+.tool-input {
+  flex-shrink: 0;
+  padding: 10px 12px;
+
+  textarea {
+    width: 100%;
+    min-height: 100px;
+
+    padding: 10px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+
+    font-family: monospace;
+    font-size: 12px;
+
+    resize: vertical;
+    outline: none;
+
+    &:focus {
+      border-color: #2563eb;
+      box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
+    }
+  }
+}
+
+/* =========================
+   ACTIONS
+========================= */
+.tool-actions {
+  flex-shrink: 0;
+
+  display: flex;
+  gap: 8px;
+
+  padding: 0 12px 10px;
+
+  button {
+    padding: 6px 12px;
+    border-radius: 6px;
+
+    border: 1px solid #e5e7eb;
+    background: white;
+
+    font-size: 12px;
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: #f3f4f6;
+    }
+
+    &:first-child {
+      background: #2563eb;
+      color: white;
+      border: none;
+
+      &:hover {
+        background: #1d4ed8;
+      }
+    }
+  }
+}
+
+/* =========================
+   OUTPUT (IMPORTANT PART)
+========================= */
+.tool-output {
+  flex: 1;
+  min-height: 0;
+
+  margin: 0 12px 12px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  overflow: auto; // 🔥 SCROLL ENABLED HERE
+
+  padding: 10px;
+
+  background: #0f172a;
+  border-radius: 10px;
+}
+
+/* BLOCK */
+.block {
+  display: flex;
+  flex-direction: column;
+
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 8px;
+
+  overflow: hidden;
+}
+
+/* LABEL */
+.label {
+  padding: 6px 10px;
+
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+
+  color: #94a3b8;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+
+  background: rgba(255,255,255,0.03);
+}
+
+/* PRE */
+.block pre {
+  margin: 0;
+  padding: 10px;
+
+  font-size: 12px;
+  font-family: monospace;
+
+  color: #38bdf8;
+
+  overflow: auto; // safety scroll inside block
+}
+
+/* =========================
+   STATUS
+========================= */
+.status {
+  flex-shrink: 0;
+
+  padding: 8px 12px;
+  font-size: 12px;
+
+  color: #6b7280;
+  border-top: 1px solid #e5e7eb;
+  background: #ffffff;
+}

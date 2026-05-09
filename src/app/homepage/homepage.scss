@@ -1,0 +1,243 @@
+
+
+// .app {
+//   height: 100vh;
+//   display: flex;
+//   flex-direction: column;
+//   font-family: 'Inter', sans-serif;
+//   background: #f5f7fb;
+// }
+
+// /* HEADER */
+// .header {
+//   height: 55px;
+//   background: #ffffff;
+
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+
+//   padding: 0 16px;
+
+//   border-bottom: 1px solid #e5e7eb;
+//   box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+
+//   .logo {
+//     font-weight: 600;
+//     color: #1f2937;
+//   }
+
+//   .title {
+//     font-size: 13px;
+//     color: #6b7280;
+//   }
+// }
+
+// /* BODY */
+// .body {
+//   flex: 1;
+//   display: flex;
+//   overflow: hidden;
+// }
+
+// /* SIDEBAR */
+// .sidebar {
+//   width: 240px;
+//   background: #ffffff;
+//   border-right: 1px solid #e5e7eb;
+//   padding: 10px;
+// }
+
+// .menu-item {
+//   padding: 10px 12px;
+//   margin-bottom: 6px;
+//   border-radius: 8px;
+//   cursor: pointer;
+//   font-size: 13px;
+//   color: #374151;
+//   transition: all 0.2s ease;
+
+//   &:hover {
+//     background: #f3f6fb;
+//   }
+// }
+
+// .menu-item.active {
+//   background: #e8f0ff;
+//   color: #1d4ed8;
+//   font-weight: bolder;
+//   font-size: 15px;
+// }
+
+// /* CONTENT */
+// .content {
+//   flex: 1;
+//   padding: 12px;
+//   display: flex;
+//   flex-direction: column;
+//   overflow: hidden; // critical
+// }
+
+// /* PANEL */
+// .panel {
+//   flex: 1;
+//   display: flex;
+//   flex-direction: column;
+//   min-height: 0; // critical for scroll
+//   background: #ffffff;
+//   border: 1px solid #e5e7eb;
+//   border-radius: 10px;
+//   overflow: hidden;
+//   box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+// }
+
+// .panel-header {
+//   padding: 12px;
+//   font-weight: 600;
+//   font-size: 13px;
+//   border-bottom: 1px solid #e5e7eb;
+//   background: #f9fafc;
+//   flex-shrink: 0;
+// }
+
+// /* FOOTER */
+// .footer {
+//   height: 40px;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   font-size: 14px;
+//   font-weight: bold;
+//   color: #070707;
+//   background: #ffffff;
+//   border-top: 1px solid #e5e7eb;
+// }
+
+
+/* PROFESSIONAL ENTERPRISE COLOR PALETTE */
+$bg-main: #f8fafc;        /* Soft gray-blue background */
+$bg-surface: #ffffff;     /* Pure white for cards/panels */
+$border-color: #e2e8f0;   /* Crisp, light borders */
+$primary-brand: #2563eb;  /* Modern Corporate Blue */
+$primary-light: #eff6ff;  /* Soft blue tint for active states */
+$text-main: #1e293b;      /* Deep slate for readability */
+$text-muted: #64748b;     /* Slate gray for secondary info */
+$shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+
+.app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inter', -apple-system, sans-serif;
+  background: $bg-main;
+  color: $text-main;
+}
+
+/* HEADER */
+.header {
+  height: 55px;
+  background: $bg-surface;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  border-bottom: 1px solid $border-color;
+  box-shadow: $shadow-sm;
+
+  .logo {
+    font-weight: 700;
+    color: $primary-brand; /* Logo pop */
+    letter-spacing: -0.5px;
+  }
+
+  .title {
+    font-size: 13px;
+    font-weight: 500;
+    color: $text-muted;
+  }
+}
+
+/* BODY */
+.body {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 240px;
+  background: $bg-surface;
+  border-right: 1px solid $border-color;
+  padding: 16px 12px;
+}
+
+.menu-item {
+  padding: 10px 16px;
+  margin-bottom: 4px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: $text-muted;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    background: #f1f5f9;
+    color: $text-main;
+  }
+}
+
+.menu-item.active {
+  background: $primary-light;
+  color: $primary-brand;
+  font-weight: 600;
+  box-shadow: inset 3px 0 0 $primary-brand; /* Professional indicator line */
+}
+
+/* CONTENT AREA */
+.content {
+  flex: 1;
+  padding: 24px; /* Increased breathing room */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* PANEL */
+.panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  background: $bg-surface;
+  border: 1px solid $border-color;
+  border-radius: 12px; /* Slightly rounder for modern look */
+  overflow: hidden;
+  box-shadow: $shadow-md;
+}
+
+.panel-header {
+  padding: 16px 20px;
+  font-weight: 600;
+  font-size: 14px;
+  color: $text-main;
+  border-bottom: 1px solid $border-color;
+  background: #fcfdfe; /* Very subtle header tint */
+  flex-shrink: 0;
+}
+
+/* FOOTER */
+.footer {
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 500;
+  color: black;
+  background: $bg-surface;
+  border-top: 1px solid $border-color;
+}
+

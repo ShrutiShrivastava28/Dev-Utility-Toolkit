@@ -1,0 +1,25 @@
+<div class="tool">
+
+  <!-- HEADER -->
+  <div class="tool-header">
+    <h2></h2>
+    <button class="copy-btn" (click)="copyUuid()">Copy</button>
+  </div>
+
+  <!-- OUTPUT -->
+  <div class="tool-output">
+    <pre>{{ uuid }}</pre>
+  </div>
+
+  <!-- ACTIONS -->
+  <div class="tool-actions">
+    <button (click)="generateUuid()">Generate</button>
+    <button (click)="clear()">Clear</button>
+  </div>
+
+  <!-- STATUS -->
+  <div class="status" *ngIf="statusMessage">
+    {{ statusMessage }}
+  </div>
+
+</div>

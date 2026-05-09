@@ -1,0 +1,58 @@
+<div class="tool">
+
+  <!-- HEADER -->
+  <div class="tool-header">
+    <h2></h2>
+    <button class="copy-btn" (click)="copyUrl()">Copy URL</button>
+  </div>
+
+  <!-- BASE URL -->
+  <div class="tool-input">
+    <input
+      type="text"
+      [(ngModel)]="baseUrl"
+      placeholder="Enter base URL (e.g. https://api.com/users)"
+    />
+  </div>
+
+  <!-- PARAMS -->
+  <div class="params">
+
+    <div class="param-row" *ngFor="let param of params; let i = index">
+
+      <input
+        type="text"
+        placeholder="Key"
+        [(ngModel)]="param.key"
+      />
+
+      <input
+        type="text"
+        placeholder="Value"
+        [(ngModel)]="param.value"
+      />
+
+      <button (click)="removeParam(i)">✕</button>
+
+    </div>
+
+  </div>
+
+  <!-- ACTIONS -->
+  <div class="tool-actions">
+    <button (click)="addParam()">+ Add Param</button>
+    <button (click)="generateUrl()">Generate</button>
+    <button (click)="clear()">Clear</button>
+  </div>
+
+  <!-- OUTPUT -->
+  <div class="tool-output">
+    <pre>{{ finalUrl }}</pre>
+  </div>
+
+  <!-- STATUS -->
+  <div class="status" *ngIf="statusMessage">
+    {{ statusMessage }}
+  </div>
+
+</div>

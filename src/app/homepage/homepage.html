@@ -1,0 +1,76 @@
+<div class="app">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="logo">Developer Utility Toolkit</div>
+  </div>
+
+  <!-- BODY -->
+  <div class="body">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+
+      <div class="menu-item" [class.active]="selectedTab === 'APITESTER'" (click)="switchTab('APITESTER')">
+        Api Tester
+      </div>
+
+      <div class="menu-item" [class.active]="selectedTab === 'BASE64'" (click)="switchTab('BASE64')">
+        Base64 Converter
+      </div>
+
+      <div class="menu-item" [class.active]="selectedTab === 'JWTDECODER'" (click)="switchTab('JWTDECODER')">
+        JWT Decoder
+      </div>
+
+      <div class="menu-item" [class.active]="selectedTab === 'QUERYPARAM'" (click)="switchTab('QUERYPARAM')">
+       Query Param
+      </div>
+
+      <div class="menu-item" [class.active]="selectedTab === 'UUIDGENERATOR'" (click)="switchTab('UUIDGENERATOR')">
+       UUID Generator
+      </div>
+
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="content">
+
+      <!-- API TESTER -->
+      <div class="panel" *ngIf="selectedTab === 'APITESTER'">
+        <div class="panel-header">Api Tester</div>
+        <app-api-tester></app-api-tester>
+      </div>
+
+      <!-- BASE64 -->
+      <div class="panel" *ngIf="selectedTab === 'BASE64'">
+        <div class="panel-header">Base64 Converter</div>
+        <app-base64></app-base64>
+      </div>
+
+
+      <div class="panel" *ngIf="selectedTab === 'JWTDECODER'">
+        <div class="panel-header">JWT Decoder</div>
+        <app-jwt-decoder></app-jwt-decoder>
+      </div>
+
+      <div class="panel" *ngIf="selectedTab === 'QUERYPARAM'">
+        <div class="panel-header"> Query Params</div>
+        <app-query-params></app-query-params>
+      </div>
+
+      <div class="panel" *ngIf="selectedTab === 'UUIDGENERATOR'">
+        <div class="panel-header">UUID Generator</div>
+        <app-uuidgenerator></app-uuidgenerator>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    Designed & Developed by Shruti Shrivastava
+  </div>
+
+</div>

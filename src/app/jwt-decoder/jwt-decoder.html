@@ -1,0 +1,48 @@
+<div class="tool">
+
+  <!-- HEADER -->
+  <div class="tool-header">
+    <h2></h2>
+    <button class="copy-btn" (click)="copyToClipboard(payload)">Copy Payload</button>
+  </div>
+
+  <!-- INPUT -->
+  <div class="tool-input">
+    <textarea
+      [(ngModel)]="token"
+      placeholder="Paste JWT token here..."
+    ></textarea>
+  </div>
+
+  <!-- ACTION -->
+  <div class="tool-actions">
+    <button (click)="decodeToken()">Decode</button>
+    <button (click)="clear()">Clear</button>
+  </div>
+
+  <!-- OUTPUT -->
+  <div class="tool-output">
+
+    <div class="block">
+      <div class="label">Header</div>
+      <pre>{{ header }}</pre>
+    </div>
+
+    <div class="block">
+      <div class="label">Payload</div>
+      <pre>{{ payload }}</pre>
+    </div>
+
+    <div class="block">
+      <div class="label">Expiry</div>
+      <pre>{{ expiry }}</pre>
+    </div>
+
+  </div>
+
+  <!-- STATUS -->
+  <div class="status" *ngIf="statusMessage">
+    {{ statusMessage }}
+  </div>
+
+</div>
